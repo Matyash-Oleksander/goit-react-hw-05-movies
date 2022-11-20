@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { FilmsList } from '../components/FilmsList';
 // import { Link } from 'react-router-dom';
 
-export const Home = () => {
+const Home = () => {
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
@@ -21,3 +21,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home;

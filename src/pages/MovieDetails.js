@@ -15,7 +15,6 @@ import {
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
-  // console.log('START!!!!!!!!!!!!!!!!!!!!');
   const { movieId } = useParams();
   const [filmInfo, setFilmInfo] = useState({});
   const [filmGenres, setFilmGenres] = useState([]);
@@ -50,7 +49,7 @@ const MovieDetails = () => {
         </div>
         <div>
           <FilmTitle>
-            {title}({releaseYear})
+            {title} ({releaseYear})
           </FilmTitle>
           <VoteAverage>
             <span>Average:</span> {vote_average}

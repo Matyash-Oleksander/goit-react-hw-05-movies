@@ -4,7 +4,7 @@ import { getMovieCast, BASE_IMG_URL, IMG_W200 } from '../pages/api';
 import { CastContainer, CastPoster, CastName } from './Cast.styled';
 import { Message } from 'pages/Movies.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   const movieId = useOutletContext();
 
@@ -42,4 +42,4 @@ export const Cast = () => {
   );
 };
 
-// export default Cast;
+export default Cast;

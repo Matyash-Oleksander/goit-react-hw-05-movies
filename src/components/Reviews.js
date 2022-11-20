@@ -4,7 +4,7 @@ import { getMovieReviews } from '../pages/api';
 import { ReviewsContainer } from './Reviews.styled';
 import { Message } from 'pages/Movies.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const movieId = useOutletContext();
 
@@ -35,4 +35,4 @@ export const Reviews = () => {
   );
 };
 
-// export default Reviews;
+export default Reviews;

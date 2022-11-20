@@ -4,7 +4,7 @@ import { useSearchParams, useLocation } from 'react-router-dom';
 import { getSearchMovie } from './api';
 import { FilmsList } from '../components/FilmsList';
 
-export const Movies = () => {
+const Movies = () => {
   const [query, setQuery] = useState('');
   const [films, setFilms] = useState([]);
   const [message, setMessage] = useState(
@@ -62,4 +62,4 @@ export const Movies = () => {
   );
 };
 
-// export default Movies;
+export default Movies;
