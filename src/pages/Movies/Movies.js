@@ -1,8 +1,8 @@
 import { SearchForm, Message } from './Movies.styled';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import { getSearchMovie } from './api';
-import { FilmsList } from '../components/FilmsList';
+import { getSearchMovie } from '../api';
+import { FilmsList } from '../../components/FilmList/FilmsList';
 
 const Movies = () => {
   const [query, setQuery] = useState('');

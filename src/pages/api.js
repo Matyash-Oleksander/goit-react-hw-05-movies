@@ -20,24 +20,28 @@ export const getTrending = async (page = 1) => {
   return data;
 };
 
-export const getFilmById = async id => {
-  const { data } = await axios.get(`/movie/${id}?api_key=${API_KEY}`);
+export const getFilmById = async movieId => {
+  const { data } = await axios.get(`/movie/${movieId}?api_key=${API_KEY}`);
   return data;
 };
 
-export const getMovieCast = async id => {
-  const { data } = await axios.get(`/movie/${id}/credits?api_key=${API_KEY}`);
+export const getMovieCast = async movieId => {
+  const { data } = await axios.get(
+    `/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
+  );
   return data;
 };
 
-export const getMovieReviews = async id => {
-  const { data } = await axios.get(`/movie/${id}/reviews?api_key=${API_KEY}`);
+export const getMovieReviews = async movieId => {
+  const { data } = await axios.get(
+    `/movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+  );
   return data;
 };
 
 export const getSearchMovie = async (query, page) => {
   const { data } = await axios.get(
-    `/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}`
+    `/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=${page}`
   );
   return data;
 };

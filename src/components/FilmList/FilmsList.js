@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { IMG_W300, BASE_IMG_URL } from '../pages/api';
+import { IMG_W300, BASE_IMG_URL } from '../../pages/api';
 import {
   FilmsContainer,
   FilmItem,

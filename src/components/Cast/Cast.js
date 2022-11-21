@@ -1,8 +1,8 @@
 import { useOutletContext } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getMovieCast, BASE_IMG_URL, IMG_W200 } from '../pages/api';
+import { getMovieCast, BASE_IMG_URL, IMG_W200 } from '../../pages/api';
 import { CastContainer, CastPoster, CastName } from './Cast.styled';
-import { Message } from 'pages/Movies.styled';
+import { Message } from 'pages/Movies/Movies.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -12,6 +12,7 @@ const Cast = () => {
     try {
       getMovieCast(movieId).then(r => {
         setCast(r.cast);
+        console.log(r.cast);
       });
     } catch (error) {
       console.log(error);

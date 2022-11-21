@@ -1,8 +1,8 @@
 import { useOutletContext } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getMovieReviews } from '../pages/api';
+import { getMovieReviews } from '../../pages/api';
 import { ReviewsContainer } from './Reviews.styled';
-import { Message } from 'pages/Movies.styled';
+import { Message } from 'pages/Movies/Movies.styled';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);

@@ -1,6 +1,6 @@
 import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
-import { getFilmById, IMG_W300, BASE_IMG_URL } from './api';
+import { getFilmById, IMG_W300, BASE_IMG_URL } from '../api';
 import {
   GoBackLink,
   FilmContainer,
@@ -16,6 +16,7 @@ import {
 
 const MovieDetails = () => {
   const { movieId } = useParams();
+  console.log('movieId -', movieId);
   const [filmInfo, setFilmInfo] = useState({});
   const [filmGenres, setFilmGenres] = useState([]);
   const { poster_path, title, vote_average, overview, release_date } = filmInfo;
@@ -66,6 +67,7 @@ const MovieDetails = () => {
           }
         </div>
       </FilmContainer>
+
       <BlockTitle>Aditional information</BlockTitle>
       <AditionalInfoContainer>
         <li>

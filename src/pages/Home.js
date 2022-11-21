@@ -1,6 +1,6 @@
 import { getTrending } from './api';
 import { useState, useEffect } from 'react';
-import { FilmsList } from '../components/FilmsList';
+import { FilmsList } from '../components/FilmList/FilmsList';
 // import { Link } from 'react-router-dom';
 
 const Home = () => {
