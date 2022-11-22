@@ -36,7 +36,7 @@ const MovieDetails = () => {
 
   return (
     <Container>
-      <GoBackLink to={location.state.from ?? '/'}>Go back</GoBackLink>
+      <GoBackLink to={location?.state?.from ?? '/'}>Go back</GoBackLink>
       <FilmContainer>
         <div>
           <img
